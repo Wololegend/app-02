@@ -1,10 +1,39 @@
 <template>
   <div class="container">
     <div class="row">
-      <h2> {{ capitalizeFirstLetter(this.arrayPokemon.name) }} </h2>
+      <h2 class="col-12 col-lg-3">
+        {{ capitalizeFirstLetter(this.arrayPokemon.name) }}
+      </h2>
 
-      <pokeCard class="col-4 col-xs-6 col-lg-3 mb-1" :name="arrayPokemon.name" :url="arrayUrls[arrayPokemon.id - 1].url">
+      <pokeCard class="col-12 col-lg-3 mb-1" 
+      :name="arrayPokemon.name"
+      :url="arrayUrls[arrayPokemon.id - 1].url">
       </pokeCard>
+
+      <table class="table col-12 col-lg-6">
+        <tbody>
+          <tr>
+            <th scope="row">Height / Weight:</th>
+            <td>{{ this.arrayPokemon.height }} cm / {{ this.arrayPokemon.weight }} g.</td>
+          </tr>
+          <tr>
+            <th scope="row">Attack / Defense:</th>
+            <td>{{ this.arrayPokemon.stats[1].base_stat }} pts. / {{ this.arrayPokemon.stats[2].base_stat }} pts.</td>
+          </tr>
+          <tr>
+            <th scope="row">Sp. Attack / Sp. Defense:</th>
+            <td colspan="2">{{ this.arrayPokemon.stats[3].base_stat }} pts. / {{ this.arrayPokemon.stats[4].base_stat }} pts.</td>
+          </tr>
+          <tr>
+            <th scope="row">Health Points:</th>
+            <td colspan="2">{{ this.arrayPokemon.stats[0].base_stat }} pts.</td>
+          </tr>
+          <tr>
+            <th scope="row">Speed:</th>
+            <td colspan="2">{{ this.arrayPokemon.stats[5].base_stat }} pts.</td>
+          </tr>
+        </tbody>
+      </table>
 
     </div>
   </div>
