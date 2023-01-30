@@ -8,7 +8,7 @@
 
       <nav class="nav nav-tabs justify-content-center mb-4 col-lg-12">
         <li class="nav-item">
-          <a class="nav-link" href="/"> Pokémon </a>
+          <a class="nav-link" href="/"> Pokemon </a>
         </li>
 
         <li class="nav-item"
